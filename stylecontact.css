@@ -1,0 +1,172 @@
+/* Основные стили */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* Цвет фона для хедера */
+    color: #fff;
+}
+
+.wrap-logo .logo {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+
+
+.main {
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex: 1 1 auto;
+    
+}
+
+.allkontakt {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.main-title {
+    text-align: center;
+    font-size: 33px;
+    color: #000000;
+    margin: 40px 0;
+}
+
+.container-kontakt {
+    display: flex;
+    gap: 20px;
+    box-shadow: 1px 10px 50px 1px #000000 ;
+}
+
+.block-kontakt {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+
+.content-kontakt {
+    background-color: #e9e9e9; /* Цвет фона для контента */
+    color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 0; /* Позволяет гибко изменять размер элемента */
+
+}
+
+.text-kontakt h1 {
+    margin-bottom: 10px;
+}
+
+.text-kontakt ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.text-kontakt ul li {
+    margin-bottom: 10px;
+}
+
+.text-kontакт ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.text-kонтакт ul li a:hover {
+    text-decoration: underline;
+}
+
+.text-контакт img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.inframe {
+    flex: 1;
+    min-width: 500px;
+    max-width: 100%;
+    height: 500px;
+}
+
+footer {
+    height: 100px;
+    background-color: #856A5D;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1200px) {
+    .main {
+        padding: 10px;
+    }
+    .container-контакт {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .text-контакт img {
+        width: 25px;
+        height: 25px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .text-контакт {
+        font-size: 14px;
+    }
+}
