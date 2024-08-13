@@ -16,15 +16,25 @@ function moveSlide(direction) {
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
 
-// Автоматическое пролистывание каждые 5 секунд
-setInterval(() => {
-    moveSlide(1);
-}, 10000);
   
 
 
 
+const burgerMenu = document.querySelector('.burger-menu');
+const nav = document.querySelector('nav');
 
+burgerMenu.addEventListener('click', function() {
+    nav.classList.toggle('active');
+    burgerMenu.classList.toggle('active'); // Меняем состояние бургер-меню
+});
+
+// Закрываем меню при клике вне него
+document.addEventListener('click', function(event) {
+    if (!burgerMenu.contains(event.target) && !nav.contains(event.target)) {
+        nav.classList.remove('active');
+        burgerMenu.classList.remove('active');
+    }
+});
 
 function openProductDetail(product) {
     const detailView = document.querySelector('.product-detail');
