@@ -30,6 +30,8 @@ header {
     font-weight: bold;
     text-decoration: none;
     color: #000000;
+    text-align: center; /* Центрирование логотипа */
+    flex: 1; /* Позволяет логотипу занимать центральное место */
 }
 
 nav a {
@@ -39,6 +41,14 @@ nav a {
     font-size: 18px;
 }
 
+/* Размеры изображений */
+.text-kontакт img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; /* Выравнивание изображения по центру строки */
+}
+
+/* Основные стили для контейнеров и контента */
 .main {
     padding: 20px;
     background-color: #f4f4f4;
@@ -63,7 +73,7 @@ nav a {
     box-shadow: 1px 10px 50px 1px #000000;
 }
 
-.block-kontakt {
+.block-kontакт {
     display: flex;
     flex: 1;
     gap: 20px;
@@ -78,11 +88,11 @@ nav a {
     min-width: 0; /* Позволяет гибко изменять размер элемента */
 }
 
-.text-kontакт h1 {
+.text-kонтакт h1 {
     margin-bottom: 10px;
 }
 
-.text-kontакт ul {
+.text-контакт ul {
     list-style-type: none;
     padding: 0;
     display: flex; /* Выравнивание изображений в строку */
@@ -90,18 +100,12 @@ nav a {
     gap: 10px; /* Отступы между изображениями */
 }
 
-.text-kontакт ul li {
+.text-контакт ul li {
     margin-bottom: 0; /* Убирает отступы снизу у элементов списка */
 }
 
-.text-kontакт ul li a {
+.text-контакт ul li a {
     display: inline-block; /* Убирает отступы вокруг изображений */
-}
-
-.text-kontакт img {
-    width: 10px;
-    height: 10px;
-    vertical-align: middle; /* Выравнивает изображение по центру строки */
 }
 
 .inframe {
@@ -126,7 +130,7 @@ footer {
     .main {
         padding: 10px;
     }
-    .container-kontакт {
+    .container-контакт {
         flex-direction: column;
     }
 }
@@ -146,7 +150,7 @@ footer {
         margin: 5px 0;
     }
 
-    .text-kontакт img {
+    .text-контакт img {
         width: 20px;
         height: 20px;
     }
@@ -161,7 +165,7 @@ footer {
         font-size: 28px;
     }
 
-    .text-kontакт { 
+    .text-контакт { 
         font-size: 14px;
     }
 }
