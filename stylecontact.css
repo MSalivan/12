@@ -22,7 +22,7 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #ffffff; /* Цвет фона для хедера */
-    color: #fff;
+    color: #000000; /* Цвет текста в хедере */
 }
 
 .wrap-logo .logo {
@@ -34,6 +34,11 @@ header {
     flex: 1; /* Позволяет логотипу занимать центральное место */
 }
 
+nav {
+    display: flex;
+    gap: 15px;
+}
+
 nav a {
     color: #000000;
     text-decoration: none;
@@ -41,12 +46,12 @@ nav a {
     font-size: 18px;
 }
 
-/* Размеры изображений */
-.text-kontакт img {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle; /* Выравнивание изображения по центру строки */
+/* Размеры изображений в списке контактов */
+.contact-item img {
+    width: 25px; /* Ширина изображения */
+    height: 25px; /* Высота изображения */
 }
+
 
 /* Основные стили для контейнеров и контента */
 .main {
@@ -55,7 +60,7 @@ nav a {
     flex: 1 1 auto;
 }
 
-.allkontakt {
+.all-contacts {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -67,19 +72,20 @@ nav a {
     margin: 40px 0;
 }
 
-.container-kontakt {
+.contact-container {
     display: flex;
     gap: 20px;
     box-shadow: 1px 10px 50px 1px #000000;
 }
 
-.block-kontакт {
+.contact-block {
     display: flex;
     flex: 1;
     gap: 20px;
+    flex-direction: column;
 }
 
-.content-kontакт {
+.contact-content {
     background-color: #e9e9e9; /* Цвет фона для контента */
     color: #000000;
     padding: 20px;
@@ -88,27 +94,38 @@ nav a {
     min-width: 0; /* Позволяет гибко изменять размер элемента */
 }
 
-.text-kонтакт h1 {
+.contact-content h1 {
     margin-bottom: 10px;
 }
 
-.text-контакт ul {
+.contact-content ul {
     list-style-type: none;
     padding: 0;
-    display: flex; /* Выравнивание изображений в строку */
+    display: flex; /* Выравнивание элементов в строку */
     flex-wrap: wrap; /* Позволяет переносить элементы на новую строку при необходимости */
     gap: 10px; /* Отступы между изображениями */
+    justify-content: center; /* Центрирование элементов по горизонтали */
 }
 
-.text-контакт ul li {
+.contact-content ul li {
+    display: block; /* Каждый элемент списка начинается с новой строки */
     margin-bottom: 0; /* Убирает отступы снизу у элементов списка */
 }
 
-.text-контакт ul li a {
-    display: inline-block; /* Убирает отступы вокруг изображений */
+/* Элементы списка с изображениями */
+.contact-item {
+    display: inline-flex; /* Располагает элементы в строку */
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+    background-color: #000000;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+
 }
 
-.inframe {
+/* Контейнер для карты */
+.map-frame {
     flex: 1;
     min-width: 500px;
     max-width: 100%;
@@ -130,7 +147,7 @@ footer {
     .main {
         padding: 10px;
     }
-    .container-контакт {
+    .contact-container {
         flex-direction: column;
     }
 }
@@ -142,21 +159,43 @@ footer {
     }
 
     nav {
-        margin-top: 10px;
+        display: none; /* Скрыть навигацию по умолчанию для мобильных устройств */
     }
 
-    nav a {
-        display: block;
-        margin: 5px 0;
+    .burger-menu {
+        display: block; /* Показать бургер-меню для мобильных устройств */
+        cursor: pointer;
     }
 
-    .text-контакт img {
-        width: 20px;
+    .burger-menu .burger-icon span {
+        background-color: #000000; /* Цвет линий бургер-меню */
+    }
+
+    .close-menu {
+        display: none; /* По умолчанию кнопка закрытия не видна */
+    }
+
+    .nav-active {
+        display: flex; /* Показать навигацию при активном бургер-меню */
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    .nav-active a {
+        padding: 10px 0;
+    }
+
+    .contact-item img {
+        width: 20px; /* Уменьшение размера изображений на экранах менее 768px */
         height: 20px;
-    }
-
-    footer {
-        font-size: 14px;
     }
 }
 
@@ -165,7 +204,12 @@ footer {
         font-size: 28px;
     }
 
-    .text-контакт { 
+    .contact-content {
         font-size: 14px;
+    }
+
+    .contact-item img {
+        width: 20px; /* Уменьшение размера изображений на экранах менее 480px */
+        height: 20px;
     }
 }
