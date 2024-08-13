@@ -9,11 +9,13 @@ html, body {
     height: 100%;
     font-family: Arial, sans-serif;
 }
-.wrapper{
+
+.wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -37,19 +39,15 @@ nav a {
     font-size: 18px;
 }
 
-
-
 .main {
     padding: 20px;
     background-color: #f4f4f4;
     flex: 1 1 auto;
-    
 }
 
 .allkontakt {
     max-width: 1200px;
     margin: 0 auto;
-    
 }
 
 .main-title {
@@ -62,7 +60,7 @@ nav a {
 .container-kontakt {
     display: flex;
     gap: 20px;
-    box-shadow: 1px 10px 50px 1px #000000 ;
+    box-shadow: 1px 10px 50px 1px #000000;
 }
 
 .block-kontakt {
@@ -78,7 +76,6 @@ nav a {
     border-radius: 8px;
     flex: 1;
     min-width: 0; /* Позволяет гибко изменять размер элемента */
-
 }
 
 .text-kontakt h1 {
@@ -94,7 +91,7 @@ nav a {
     margin-bottom: 10px;
 }
 
-.text-kontакт ul li a {
+.text-kontakt ul li a {
     color: #fff;
     text-decoration: none;
 }
@@ -104,8 +101,8 @@ nav a {
 }
 
 .text-kontakt img {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     margin-right: 10px;
 }
 
@@ -131,7 +128,7 @@ footer {
     .main {
         padding: 10px;
     }
-    .container-контакт {
+    .container-kontakt {
         flex-direction: column;
     }
 }
@@ -151,9 +148,9 @@ footer {
         margin: 5px 0;
     }
 
-    .text-контакт img {
-        width: 25px;
-        height: 25px;
+    .text-kontакт img {
+        width: 10px;
+        height: 10px;
     }
 
     footer {
@@ -166,7 +163,7 @@ footer {
         font-size: 28px;
     }
 
-    .text-контакт { 
+    .text-kontакт { 
         font-size: 14px;
     }
 }
