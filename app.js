@@ -132,3 +132,108 @@ document.querySelector('.btnClose').addEventListener('click', function() {
     document.querySelector('.btnClose').style.display = 'none';
 });
 
+
+// Получаем ссылку на кнопку "Показать каталог" и другие элементы
+const catalogButton = document.getElementById('catalogButton');
+const katalog = document.querySelector('.katalog');
+const btnOpen = document.querySelector('.btnOpen');
+const btnClose = document.querySelector('.btnClose');
+
+// Функция для отображения/скрытия кнопки в зависимости от прокрутки
+function handleScroll() {
+    if (window.scrollY > 500) {
+        catalogButton.classList.add('show');
+    } else {
+        catalogButton.classList.remove('show');
+    }
+}
+
+// Обработчик события скролла
+window.addEventListener('scroll', handleScroll);
+
+// Функция для открытия каталога
+function openCatalog() {
+    katalog.classList.add('open');
+    btnOpen.style.display = 'none';
+    btnClose.style.display = 'block';
+}
+
+// Функция для закрытия каталога
+function closeCatalog() {
+    katalog.classList.remove('open');
+    btnOpen.style.display = 'block';
+    btnClose.style.display = 'none';
+}
+
+// Добавляем обработчик клика для кнопки "Показать каталог"
+catalogButton.addEventListener('click', openCatalog);
+
+// Добавляем обработчик клика для кнопки закрытия каталога
+btnClose.addEventListener('click', closeCatalog);
+
+// Добавляем обработчик клика для кнопки открытия каталога (если она необходима)
+if (btnOpen) {
+    btnOpen.addEventListener('click', openCatalog);
+}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lightProductButtons = document.querySelectorAll(".lightProduct");
+    const contentSections = document.querySelectorAll(".contentToShow");
+    const btnOpen = document.getElementById("btnOpen");
+    const buttonClose = document.querySelector(".btnClose");
+    const katalog = document.querySelector(".katalog");
+
+    function toggleSection(targetId) {
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.classList.toggle("hidden");
+            targetSection.classList.toggle("show");
+        }
+    }
+
+    lightProductButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const targetId = this.getAttribute("data-target");
+            toggleSection(targetId);
+        });
+    });
+
+    buttonClose.addEventListener("click", function() {
+        katalog.classList.remove("open");
+        document.body.style.overflow = "auto"; // Восстановление прокрутки страницы при закрытии
+    });
+
+    btnOpen.addEventListener("click", function() {
+        katalog.classList.add("open");
+        document.body.style.overflow = "hidden"; // Скрытие прокрутки страницы при открытии каталога
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const mobileMenu = document.querySelector("nav.mobile-menu");
+    const catalogButton = document.querySelector(".catalog-button");
+    const katalog = document.querySelector(".katalog");
+    const btnClose = document.querySelector(".btnClose");
+
+    burgerMenu.addEventListener("click", function() {
+        mobileMenu.classList.toggle("show");
+    });
+
+    catalogButton.addEventListener("click", function() {
+        katalog.classList.toggle("open");
+    });
+
+    btnClose.addEventListener("click", function() {
+        katalog.classList.remove("open");
+    });
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 200) {
+            catalogButton.classList.add("show");
+        } else {
+            catalogButton.classList.remove("show");
+        }
+    });
+});
+
