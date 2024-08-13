@@ -19,7 +19,7 @@ function moveSlide(direction) {
 // Автоматическое пролистывание каждые 5 секунд
 setInterval(() => {
     moveSlide(1);
-}, 5000);
+}, 10000);
   
 
 
