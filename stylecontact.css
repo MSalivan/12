@@ -99,11 +99,11 @@ nav a {
     text-decoration: none;
 }
 
-.text-kонтакт ul li a:hover {
+.text-kontakt ul li a:hover {
     text-decoration: underline;
 }
 
-.text-контакт img {
+.text-kontakt img {
     width: 30px;
     height: 30px;
     margin-right: 10px;
@@ -166,7 +166,7 @@ footer {
         font-size: 28px;
     }
 
-    .text-контакт {
+    .text-контакт { 
         font-size: 14px;
     }
 }
