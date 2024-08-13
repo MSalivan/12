@@ -69,7 +69,7 @@ nav a {
     gap: 20px;
 }
 
-.content-kontakt {
+.content-kontакт {
     background-color: #e9e9e9; /* Цвет фона для контента */
     color: #000000;
     padding: 20px;
@@ -78,32 +78,30 @@ nav a {
     min-width: 0; /* Позволяет гибко изменять размер элемента */
 }
 
-.text-kontakt h1 {
+.text-kontакт h1 {
     margin-bottom: 10px;
 }
 
-.text-kontakt ul {
+.text-kontакт ul {
     list-style-type: none;
     padding: 0;
+    display: flex; /* Выравнивание изображений в строку */
+    flex-wrap: wrap; /* Позволяет переносить элементы на новую строку при необходимости */
+    gap: 10px; /* Отступы между изображениями */
 }
 
-.text-kontakt ul li {
-    margin-bottom: 10px;
+.text-kontакт ul li {
+    margin-bottom: 0; /* Убирает отступы снизу у элементов списка */
 }
 
-.text-kontakt ul li a {
-    color: #fff;
-    text-decoration: none;
+.text-kontакт ul li a {
+    display: inline-block; /* Убирает отступы вокруг изображений */
 }
 
-.text-kontakt ul li a:hover {
-    text-decoration: underline;
-}
-
-.text-kontakt img {
+.text-kontакт img {
     width: 10px;
     height: 10px;
-    margin-right: 10px;
+    vertical-align: middle; /* Выравнивает изображение по центру строки */
 }
 
 .inframe {
@@ -128,7 +126,7 @@ footer {
     .main {
         padding: 10px;
     }
-    .container-kontakt {
+    .container-kontакт {
         flex-direction: column;
     }
 }
@@ -149,8 +147,8 @@ footer {
     }
 
     .text-kontакт img {
-        width: 10px;
-        height: 10px;
+        width: 30px;
+        height: 30px;
     }
 
     footer {
