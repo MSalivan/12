@@ -19,7 +19,7 @@ header {
     align-items: center;
     padding: 20px 10px;
     position: relative;
-    background-color: #fff;
+    background: #fff;
 }
 
 .wrap-logo {
@@ -88,7 +88,7 @@ header a:hover {
 @media (max-width: 896px) {
     header {
         justify-content: space-between; /* Пространство между логотипом и элементами */
-        background: #777;
+        background: #fff;
     }
 
     .wrap-logo {
@@ -138,7 +138,6 @@ header a:hover {
     width: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
 }
 
 .slides {
