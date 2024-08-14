@@ -19,6 +19,7 @@ header {
     align-items: center;
     padding: 20px 10px;
     position: relative;
+    background-color: #fff;
 }
 
 .wrap-logo {
@@ -56,6 +57,7 @@ header a:hover {
     cursor: pointer;
     position: relative;
     z-index: 1001;
+    background-color: #fff;
 }
 
 .burger-icon span {
@@ -86,10 +88,12 @@ header a:hover {
 @media (max-width: 768px) {
     header {
         justify-content: space-between; /* Пространство между логотипом и элементами */
+        background-color: #fff;
     }
 
     .wrap-logo {
         margin: 0;
+        background-color: #ffffff;
     }
 
     nav {
@@ -122,6 +126,7 @@ header a:hover {
         width: 100%; /* Ширина ссылок на всю ширину экрана */
         text-align: center;
         padding: 15px 0;
+        background-color: #ffffff;
     }
 }
 
