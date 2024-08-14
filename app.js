@@ -15,7 +15,6 @@ function moveSlide(direction) {
     // Сдвиг слайдов
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
-
 const burgerMenu = document.querySelector('.burger-menu');
 const nav = document.querySelector('nav');
 
