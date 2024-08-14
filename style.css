@@ -85,7 +85,7 @@ header a:hover {
 }
 
 /* Стили для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 896px) {
     header {
         justify-content: space-between; /* Пространство между логотипом и элементами */
         background-color: #fff;
@@ -93,7 +93,6 @@ header a:hover {
 
     .wrap-logo {
         margin: 0;
-        background-color: #ffffff;
     }
 
     nav {
@@ -210,6 +209,13 @@ header a:hover {
     align-items: center; /* Центрировать элементы по горизонтали */
     text-align: center; /* Центрировать текст */
     width: 300px;
+}
+@media(max-width:643px)
+{
+    .card
+    {
+        margin: 0 auto;
+    }
 }
 
 .card:hover {
