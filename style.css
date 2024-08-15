@@ -271,7 +271,7 @@ header a:hover {
     overflow: hidden;
     cursor: pointer;
     transition: 1s all;
-    background-color: #ffffff5b; /* Изменено на #856A5D */
+    background-color: #d4aa9571; /* Изменено на #856A5D */
     position: relative;
 
 }
@@ -719,7 +719,7 @@ header a:hover {
         height: 80px;
 }
 }
-@media (max-width: 480px){
+@media (min-width:320px) and (max-width: 480px){
     .main-image {
         height: 300px;
         max-width: 350px;
@@ -767,36 +767,27 @@ header a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    padding: 16px;
+    gap: 10px 5px;
+    padding:0 0 10px 0;
     margin: 0 auto;
 }
 
 /* Стили для блока товара */
 .product-block {
-    width: 175px;
-    height: 200px;
-
+    width: 155px;
+    height: 350px;
+    background: #d4aa9571;
 }
 
 .product-image {
-    min-width: 90%;
-    height: 70px;
+    width: 100%;
+    height: 230px;
+    margin:  0 0;
     object-fit: cover;
-    margin: 10px 10px 5px 10px;
 }
 
 
 
-}
-@media (max-width: 1024px) {
-    .katalog {
-        display: none;
-    }
-
-    .katalog.open {
-        display: block;
-    }
 }
 /* Базовые стили для кнопки */
 .katalog_button.toggle-list {
